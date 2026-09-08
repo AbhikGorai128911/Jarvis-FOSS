@@ -1,0 +1,10 @@
+{
+  "backend": "ollama",
+  "model_name": "llama3",
+  "endpoint": "http://localhost:11434",
+  "timeout": 120,
+  "generation_params": {
+    "temperature": 0.7,
+    "max_tokens": 512
+  }
+}
