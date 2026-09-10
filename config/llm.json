@@ -1,7 +1,7 @@
 {
-  "backend": "ollama",
-  "model_name": "llama3",
-  "endpoint": "http://localhost:11434",
+  "backend": "llamacpp",
+  "model_name": "gemma-3-1b-it-Q4_K_M.gguf",
+  "endpoint": "http://localhost:8080",
   "timeout": 120,
   "generation_params": {
     "temperature": 0.7,

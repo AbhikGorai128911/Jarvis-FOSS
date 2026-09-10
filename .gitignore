@@ -1,0 +1,5 @@
+models/
+*.gguf
+memory/conversations.db
+__pycache__/
+*.pyc

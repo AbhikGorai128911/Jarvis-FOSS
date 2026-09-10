@@ -1,11 +1,11 @@
 import json
 import os
-from src.llm.ollama_backend import OllamaBackend
+from src.llm.llamacpp_backend import LlamaCppBackend
 from src.llm.mock_backend import MockLLMBackend
 
 # Registry of supported backends
 BACKEND_REGISTRY = {
-    "ollama": OllamaBackend,
+    "llamacpp": LlamaCppBackend,
     "mock": MockLLMBackend
 }
 

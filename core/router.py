@@ -8,8 +8,6 @@ def route_command(user_input):
 
     intent = classify(user_input)
 
-    print(f"DEBUG: Intent = {intent}")
-
     #
     # UNKNOWN → LLM candidate
     #
