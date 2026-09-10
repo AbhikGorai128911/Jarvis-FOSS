@@ -1,10 +1,14 @@
 from reasoning.intent_classifier import classify
 from reasoning.decision_engine import should_execute
 
-from capabilities.executor import execute
+from capabilities.resolver import resolve, check_pending_confirmation
 
 
 def route_command(user_input):
+
+    pending_result = check_pending_confirmation(user_input)
+    if pending_result is not None:
+        return pending_result
 
     intent = classify(user_input)
 
@@ -30,4 +34,4 @@ def route_command(user_input):
     #
     # normal execution
     #
-    return execute(intent)
+    return resolve(intent, user_input)

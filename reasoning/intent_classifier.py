@@ -5,33 +5,11 @@ def classify(user_input):
 
     text = user_input.lower()
 
-    if "volume" in text:
-        return "device"
+    if text.startswith("remember"):
+        return "memory"
 
-
-    if any(word in text for word in [
-        "open",
-        "launch",
-        "start"
-    ]):
-        return "system"
-
-    if any(word in text for word in [
-        "search",
-        "google",
-        "web",
-        "internet"
-    ]):
-        return "web"
-
-    if any(word in text for word in [
-        "music",
-        "song",
-        "play music"
-        "spotify"
-        "metro"
-    ]):
-        return "music"
+    if text.startswith("what is"):
+        return "memory"
 
     if any(word in text for word in [
         "time",
@@ -39,25 +17,15 @@ def classify(user_input):
     ]):
         return "time"
 
-
-
     if any(word in text for word in [
-        "file",
-        "folder",
-        "directory",
-        "list files",
-        "create"
+        "message",
+        "text",
+        "sms",
+        "call",
+        "dial",
+        "phone"
     ]):
-        return "files"
-    
-    if any(word in text for word in [
-        "youtube",
-        "github",
-        "reddit",
-        "chatgpt",
-        "stackoverflow"
-    ]):
-        return "browser"
+        return "communication"
 
     if any(word in text for word in [
         "bluetooth",
@@ -78,21 +46,61 @@ def classify(user_input):
         return "device"
 
     if any(word in text for word in [
-        "message",
-        "text",
-        "sms",
-        "call",
-        "dial",
-        "phone"
+        "music",
+        "song",
+        "play music",
+        "spotify",
+        "metro"
     ]):
-        return "communication"
+        return "music"
 
+    if any(word in text for word in [
+        "youtube",
+        "github",
+        "reddit",
+        "chatgpt",
+        "stackoverflow",
+        "watch",
+        "live",
+        "score",
+        "match",
+        "video",
+        "picture",
+        "image",
+        "diagram",
+        "photo"
+    ]):
+        return "browser"
 
-    if text.startswith("remember"):
-        return "memory"
+    if any(word in text for word in [
+        "search",
+        "google",
+        "web",
+        "internet",
+        "who is"
+    ]):
+        return "web"
 
-    if text.startswith("what is"):
-        return "memory"
+    if any(word in text for word in [
+        "file",
+        "folder",
+        "directory",
+        "list files",
+        "create"
+    ]):
+        return "files"
+
+    if any(word in text for word in [
+        "open",
+        "launch",
+        "start",
+        "shutdown",
+        "power off",
+        "poweroff",
+        "restart",
+        "reboot"
+    ]):
+        return "system"
     
 
 
